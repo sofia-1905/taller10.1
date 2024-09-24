@@ -37,6 +37,10 @@ function showList(array) {
 }
 
 document.addEventListener("DOMContentLoaded", (e) => {
-  // Escribe tu solución aquí
-  // Sugerencia de cómo mostrar el array => showList(strangeArray);
+  // Filtrar los elementos de tipo string del array
+  const filteredstring = strangeArray.filter(element => typeof element === 'string');
+  // Ordenar los string alfabeticamente sin importar mayúsculas o minúsculas
+  const sortedArray = filteredstring.sort((a, b) => a.toLowerCase().localeCompare(b.toLowerCase()));;
+    // Mostrar el array filtrado y ordenado
+    showList(sortedArray);
 });
